@@ -1,0 +1,105 @@
+1. Memakai cross cable
+	= hijau-putih, hijau, putih-orange, biru, putih-biru, orange, putih coklat, coklat.
+
+
+2. FLSM
+192.168.1.0/25
+Alpha -25
+Beta -5
+Gama -20
+
+Need IP 25 
+2^n -2 = 25
+2^n =27
+n= 5
+2^5 = 32 >=25
+
+h= 32- 24 - 5
+ = 3
+subnet baru
+= 24+3 = 27.
+27 / 8 = 3 sisa 3
+11111111.11111111.11111111.11100000
+
+Alpha
+IP:192.168.1.0/27
+Subnet Mask: 255.255.255.224
+Network Address:192.168.1.0
+Broadcast Address:192.168.1.31
+Usable IP:192.168.1.1 - 192.168.1.30
+
+Beta
+IP:192.168.1.32/27
+Subnet Mask: 255.255.255.224
+Network Address:192.168.1.32
+Broadcast Address:192.168.1.63
+Usable IP:192.168.1.33 - 192.168.1.62
+
+Beta
+IP:192.168.1.64/27
+Subnet Mask: 255.255.255.224
+Network Address:192.168.1.64
+Broadcast Address:192.168.1.95
+Usable IP:192.168.1.65 - 192.168.1.94
+
+3. VLSM
+Beta -40
+Gama -25
+Theta -15
+Alpha -10
+
+-Beta (40)
+2^n-2 >= IP yang dibutuhkan
+2^n-2 >=40
+n=6
+h= 32-24-6
+h= 2
+CDIR = 26
+IP:192.168.1.0/26
+Subnet Mask: 255.255.255.192
+Network Address:192.168.1.0
+Broadcast Address:192.168.1.63
+Usable IP:192.168.1.1 - 192.168.1.62
+
+-Gama (25)
+2^n-2 >= IP yang dibutuhkan
+2^n-2 >=25
+n=5
+h= 32-24-5
+h= 3
+CDIR = 27
+IP:192.168.1.64/27
+Subnet Mask: 255.255.255.224
+Network Address:192.168.1.64
+Broadcast Address:192.168.1.95
+Usable IP:192.168.1.65 - 192.168.1.94
+
+-Theta (15)
+2^n-2 >= IP yang dibutuhkan
+2^n-2 >=15
+n=5
+h= 32-24-5
+h= 3
+CDIR = 27
+IP:192.168.1.96/27
+Subnet Mask: 255.255.255.224
+Network Address:192.168.1.96
+Broadcast Address:192.168.1.127
+Usable IP:192.168.1.97 - 192.168.1.126
+
+-Alpha (10)
+2^n-2 >= IP yang dibutuhkan
+2^n-2 >=10
+n=4
+h= 32-24-4
+h= 4
+CDIR = 28
+IP:192.168.1.128/28
+Subnet Mask: 255.255.255.240
+Network Address:192.168.1.128
+Broadcast Address:192.168.1.143
+Usable IP:192.168.1.129 - 192.168.1.142
+
+
+
+
